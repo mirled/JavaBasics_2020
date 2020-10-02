@@ -6,11 +6,11 @@ public class Item2SortingAlgorithms {
     static int[] bubbleSort(int[] arr){
         int[] arrSort = Arrays.copyOf(arr,arr.length);
         for (int i = 0; i < arrSort.length-1; i++) {
-            for (int j = 0; j < arrSort.length-1-i; j++) {
-                if(arrSort[j+1]<arrSort[j]){
-                    int temp = arrSort[j+1];
-                    arrSort[j+1] = arrSort[j];
-                    arrSort[j] = temp;
+            for (int j = i+1; j < arrSort.length; j++) {
+                if(arrSort[j]<arrSort[i]){
+                    int temp = arrSort[j];
+                    arrSort[j] = arrSort[i];
+                    arrSort[i] = temp;
                 }
             }
         }
