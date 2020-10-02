@@ -10,7 +10,7 @@ public class Item2EverySecondElement {
     }
 
     private static void printEverySecondElement(int[] myArray,int indexToPrint){
-        if(indexToPrint<=myArray.length) {
+        if(indexToPrint<=myArray.length&&indexToPrint>0) {
             for (int i = indexToPrint - 1; i < myArray.length; i += indexToPrint) {
                 System.out.print(myArray[i]+" ");
             }

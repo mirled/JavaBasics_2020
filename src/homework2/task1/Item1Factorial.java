@@ -7,13 +7,17 @@ public class Item1Factorial {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int numberForFactorial = scanner.nextInt();
-        int factorial = 1;
-        for (int i = 1; i < numberForFactorial; i++) {
-            System.out.print(i+"*");
-            factorial *= i;
+        if (numberForFactorial==0){
+            System.out.println("0! = 1");
+        } else {
+            int factorial = 1;
+            System.out.print(factorial);
+            for (int i = 2; i < numberForFactorial + 1; i++) {
+                System.out.print("*" + i);
+                factorial *= i;
+            }
+            System.out.println(" = " + factorial);
         }
-        factorial *= numberForFactorial;
-        System.out.println(numberForFactorial+"="+factorial);
     }
 
 }
